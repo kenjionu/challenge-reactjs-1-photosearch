@@ -5,7 +5,7 @@ const handleClick = () => {
     console.log('hoy me clickeo todo')
   }
 
-  
+
 export const Home = () => {
     return(
         <div className='home'>

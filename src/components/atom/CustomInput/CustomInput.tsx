@@ -1,19 +1,18 @@
 import { Control, Controller, FieldError } from "react-hook-form";
 import './CustomInput.css'
 import { FormValues } from "../../../models";
-import { searchValues } from "../../../models/search.models";
 
 //por que es keyof FormValues?
 //porque FormValues es un objeto que tiene como propiedades los campos del formularioß
-interface Props {
+interface InputFormProps {
     name: keyof FormValues;
-    control: Control<FormValues | searchValues>;
+    control: Control<FormValues>;
     label: string;
-    type?: string;
+    type: string;
     error?: FieldError;
 }
 
-const InputForm = ({ name, control, label, type, error}: Props) => {
+const InputForm = ({ name, control, label, type, error}: InputFormProps) => {
     return (
         <div className='form-group'>
             <label htmlFor='name'>{label}</label>
