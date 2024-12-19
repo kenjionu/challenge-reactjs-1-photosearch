@@ -1,11 +1,14 @@
 import './App.css'
 import withPage from './hocs/withPage';
+import { Profile } from './private';
+import PageContainer from './private/PagePrivateContainer';
 import { Posts } from './private/Posts/Posts';
 import { Home } from './public/Home'
 
 const PageComponentMapping: Record<number, React.ComponentType> = {
   1: Home,
   2: Posts,
+  3: Profile,
 }
 
 interface AppProps {
@@ -13,17 +16,20 @@ interface AppProps {
   changePage: (page: number) => void;
 }
 
-const App = ({ pageCurrent, changePage }: AppProps) => {
+const App = ({ pageCurrent }: AppProps) => {
   const CurrentPage = PageComponentMapping[pageCurrent] || Home;
 
   return (
-    <>
-         <div>
-            <button onClick={() => changePage(1)}>Ir a Home</button>
-            <button onClick={() => changePage(2)}>Ir a Posts</button>
-            <button onClick={() => changePage(3)}>Ir a Contact</button>
-            <CurrentPage />
+    <>  
+      {pageCurrent >= 2 ? (
+        <PageContainer>
+          <CurrentPage />
+        </PageContainer>
+      ): ( 
+        <div>
+          <CurrentPage />
         </div>
+      )}
     </>
   )
 }

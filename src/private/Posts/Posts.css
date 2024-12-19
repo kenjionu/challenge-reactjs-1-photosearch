@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Kalam:wght@300;400;700&display=swap');
+
+.posts-container {
+    padding: 20px;
+    background-color: #F4DFCA;
+
+}
+
+.posts-container p{
+    font-family: "Kalam", serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el tamaño de las columnas */
+    gap: 10px;
+}
+
+.photo-item img {
+    width: 84px;
+    height: 84px;
+    border-radius: 8px; 
+}

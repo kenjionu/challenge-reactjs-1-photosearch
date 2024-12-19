@@ -1,7 +1,14 @@
+import { CategoryCollection } from '../../components/organisms';
+import { ActivityFeedSection } from '../../components/organisms/ActivityFeedSection.tsx/ActivityFeedSection';
+import './Posts.css';
+
 export const Posts = () => {
+  
+    
     return (
         <div>
-            <h1>posts</h1>
-        </div>
-    )
-}
+                <CategoryCollection />
+                <ActivityFeedSection />
+        </div>)
+
+};

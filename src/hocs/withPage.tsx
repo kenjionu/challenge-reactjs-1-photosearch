@@ -1,5 +1,5 @@
 import React from 'react';
-import usePage from '../hooks/usePage';
+import { usePage } from '../hooks';
 
 interface WithPageProps {
   pageCurrent: number;

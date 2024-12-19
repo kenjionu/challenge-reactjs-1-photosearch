@@ -1,0 +1,13 @@
+.nav-footer{
+    display: flex;
+    column-gap: 34px;
+    background-color: #F4DFCA;
+}
+.nav-footer ul{
+    display: flex;;
+    flex-direction: row;
+    column-gap: 34px;
+}
+.nav-footer ul li{
+    list-style-type: none;
+}

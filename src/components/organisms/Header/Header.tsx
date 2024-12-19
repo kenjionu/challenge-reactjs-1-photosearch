@@ -1,9 +1,14 @@
-import './Header.scss'
+import './Header.css'
+import logo from '../../../assets/images/logo.png'
+import menu from '../../../assets/images/menu.svg'
+
 const Header = () => {
     return (
         <div className="header">
-            <h1>PhotoSearch</h1>
-            <p>Find your best photographer in the city</p>
+            <img src={logo}></img><h1>PhotoSearch</h1>
+            <div className="nav">
+                <img src={menu}></img>
+            </div>
         </div>
     );
 };

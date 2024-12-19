@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Kalam:wght@300;400;700&display=swap');
+
+.activity-feed-section p{
+        font-family: "Kalam", serif;
+        font-weight: 800;
+        font-style: italic;
+        text-align: left;
+        margin-left: 15px;
+        color: #3A3636;
+}
+.activity-feed-section{
+    background-color: #F4DFCA;
+    padding-top: 8px;
+}
+
+.activity-feed-section-level-2{
+    margin-top:16px;
+    background-color: white;
+}

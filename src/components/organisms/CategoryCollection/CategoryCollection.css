@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Kalam:wght@300;400;700&display=swap');
+
+.gallery-container{
+    font-family: "Kalam", serif;
+    font-weight: 800;
+    font-style: italic;
+    background-color: #F4DFCA;
+    padding-top: 8px;
+}
+.gallery-container p{
+    text-align: left;
+    margin-left:15px;
+    color: #3A3636;
+}
+
+.section-category {
+    display: flex;
+    max-width: 300px;
+    height: 300px;
+    width: 100%;
+
+    overflow-x:scroll;
+    scroll-snap-type: x mandatory;
+}
+.section-category img{
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
