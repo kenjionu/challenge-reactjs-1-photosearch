@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Photos } from '../models/photos.model';
 
 const API_URL = 'https://api.unsplash.com/photos/random';
 const ACCESS_KEY = 'Tja6aqE2bhqxHCiKH5cGiGCALmcjob7ka3lKnRdxrB4'; // Reemplaza con tu clave de acceso
@@ -43,4 +44,37 @@ export const useFetchPhotos = (categories: string[]) => {
     }, [categories]);
 
     return { photos, loading, error };
+};
+
+
+export const useFetchSinglePhoto = (username?: string) => {
+  const [photo, setPhoto] = useState<Photos | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!username) return;
+
+    const fetchPhoto = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get<Photos>(API_URL, {
+          params: {
+            username: username,
+            client_id: ACCESS_KEY,
+          },
+        });
+        setPhoto(response.data);
+      } catch (error) {
+        console.error('Error fetching photo:', error);
+        setError('Error fetching photo.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPhoto();
+  }, [username]);
+
+  return { photo, loading, error };
 };

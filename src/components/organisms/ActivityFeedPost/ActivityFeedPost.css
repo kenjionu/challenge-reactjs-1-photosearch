@@ -1,0 +1,35 @@
+.activity-feed-post-header{
+
+}
+.activity-feed{
+    display: flex;
+}
+
+.activity-feed-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-feed-end{
+    flex:auto;
+    text-align: right;
+
+}
+
+.activity-feed-post-image{
+    
+}
+
+.avatar{
+    /* Mask group */
+    margin-top:12px;
+    border-radius:20px;
+    background: #D9D9D9;
+    width: 30px;
+    height: 30px;
+
+}
+
+.activity-feed-post-image img {
+    height: 189px;
+}

@@ -2,6 +2,7 @@
     display: flex;
     column-gap: 34px;
     background-color: #F4DFCA;
+    flex-direction: row;
 }
 .nav-footer ul{
     display: flex;;
