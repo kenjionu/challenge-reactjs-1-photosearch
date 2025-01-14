@@ -20,7 +20,7 @@ export const ActivityFeedPost = () => {
             <img className='avatar' src={profileImageUrl} alt='Profile' />
           )}
           <div className='activity-feed-content'>
-            <h4>Ana Rojas {profileName}</h4>
+            <h4>{profileName}</h4>
             <p>8 hours in cerro nutibar</p>
           </div>
           <div className='activity-feed-end'>

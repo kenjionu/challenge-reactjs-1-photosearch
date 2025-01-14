@@ -1,14 +1,20 @@
 .nav-footer{
     display: flex;
-    column-gap: 34px;
     background-color: #F4DFCA;
     flex-direction: row;
+    justify-content: center;
 }
 .nav-footer ul{
-    display: flex;;
+    display: flex;
     flex-direction: row;
     column-gap: 34px;
+    padding-left: 0px;
 }
 .nav-footer ul li{
     list-style-type: none;
 }
+
+.nav-footer ul li a{
+    cursor: pointer;
+}
+

@@ -1,8 +1,13 @@
-
+import { ProfileSection } from '../../components/organisms/ProfileSection/ProfileSection'
+import './Profile.css'
 export const Profile = () => {
     return (
         <div>
-            <h1>Hello Profile</h1>
+            <div className="profile">
+                <ProfileSection />
+
+             
+            </div>
         </div>
     )
 }

@@ -8,4 +8,6 @@ export interface User {
     instagram_username: string;
     bio: string;
     profile_image: Urls
+    name: string;
+    followers_count: number;
 }

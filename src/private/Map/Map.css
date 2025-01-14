@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Kalam:wght@300;400;700&display=swap');
+
+
+.content-map{
+    display: flex;
+    justify-content: center;
+}
+
+.content-map p {
+    font-size: 12px;
+    font-family: 'Kalam';
+    font-weight: bold;
+}
+
+.map{
+    background-color: #F4DFCA;        
+}
+
+@media (min-width: 640px) {  
+
+
+
+    .google-map{
+        display: block;
+    }
+
+}
