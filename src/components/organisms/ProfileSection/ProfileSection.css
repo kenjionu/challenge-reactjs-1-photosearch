@@ -23,6 +23,7 @@
 
 .socials-data{
     display: block;
+    padding-bottom: 16px;
 }
 .info-socials{
     display: flex;

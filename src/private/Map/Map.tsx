@@ -1,38 +1,49 @@
-import { APIProvider, Map as GoogleMap, Marker, useMarkerRef } from '@vis.gl/react-google-maps';
+import { AdvancedMarker, APIProvider, Map as GoogleMap, Marker, Pin, useMarkerRef } from '@vis.gl/react-google-maps';
 import './Map.css'
-import { useEffect } from 'react';
+import cameraDLSR from '../../assets/images/dslr-camera.svg';
+import { useFetchPhotos } from '../../hooks/useApi';
+import MarkerCustom from '../../components/molecules/MarkerCustom';
+
+const categories = ['dogs', 'cats', 'people', 'wedding'];
+
 export const MapComponent = () => {
+
+    const { photos, loading, error } = useFetchPhotos(categories);
     const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-    const [markerRef, marker] = useMarkerRef();
-
-    useEffect(() => {
-      if (!marker) {
-        return;
-      }
-  
-    }, [marker]);
-
+    console.log(photos)
 
     return (
         <div className='map'>
             <div className='content-map'>
+                <img src={cameraDLSR}></img>
                 <p>Is photographers in your area</p>
             </div>
             <div className='google-map'>
                 <APIProvider apiKey={apiKey}>
                     <GoogleMap
-                        style={{width: '100%', height: '300px'}}
-                        defaultCenter={{lat: 22.54992, lng: 0}}
+                        style={{ width: '100%', height: '100vh' }}
+                        defaultCenter={{ lat: 22.54992, lng: 0 }}
                         defaultZoom={3}
                         gestureHandling={'greedy'}
                         disableDefaultUI={true}
-                    />
-                <Marker ref={markerRef} position={{lat: 53.54992, lng: 10.00678}} />
-                <Marker ref={markerRef} position={{lat: 23.54992, lng: 4.00678}} />
-                <Marker ref={markerRef} position={{lat: 11.54992, lng: 24.00678}} />
+                        mapId='MapId'>
+                                
 
-                </APIProvider> 
+                                {photos.map((categoryData) => (
+                                        <MarkerCustom imagesx={categoryData.images}>
+                            
+                                        </MarkerCustom>
+                                         
+                                ))}
+
+           
+
+                    </GoogleMap>
+
+                </APIProvider>
             </div>
         </div>
     );
+
+
 };  

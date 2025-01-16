@@ -1,9 +1,11 @@
+import { Location } from "./location.model";
 import { User } from "./user.model";
 
 export interface Photos {
     id: string;
     urls: Urls;
     user?: User;
+    location?: Location;
 }
 
 export interface Urls {

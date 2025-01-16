@@ -3,13 +3,17 @@
 
 .content-map{
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-left:16px;
+    column-gap: 15px;
 }
 
 .content-map p {
     font-size: 12px;
     font-family: 'Kalam';
     font-weight: bold;
+    color: black;
+    text-align: left;
 }
 
 .map{
@@ -25,3 +29,15 @@
     }
 
 }
+
+.pinBpox {
+    width: 52px;
+    height: 65px;
+    background-color: #B27A57;
+    border-radius: 50% 50% 50% 50%;
+    border-bottom-left-radius: 62%;
+    border-bottom-right-radius: 62%;
+    border-bottom-width: 311px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+

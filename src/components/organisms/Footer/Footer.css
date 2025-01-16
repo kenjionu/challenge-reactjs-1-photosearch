@@ -3,6 +3,10 @@
     background-color: #F4DFCA;
     flex-direction: row;
     justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .nav-footer ul{
     display: flex;

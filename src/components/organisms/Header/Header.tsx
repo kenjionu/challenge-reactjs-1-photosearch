@@ -1,5 +1,5 @@
 import './Header.css'
-import logo from '../../../assets/images/logo.png'
+import logo from '../../../assets/images/logo.svg'
 import menu from '../../../assets/images/menu.svg'
 
 const Header = () => {

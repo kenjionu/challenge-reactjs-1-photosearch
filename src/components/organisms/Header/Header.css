@@ -5,6 +5,12 @@
     flex-direction: row;
     column-gap: 14px;
     padding-bottom: 14px;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background: white;
+    padding-left: 15px;
+    padding-top: 12px;
 }
 .header h1 {
     font-size: 18px;
@@ -28,7 +34,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     flex: auto;
-    display: flex
-
+    display: flex;
+    margin-right: 32px;
 }
 
