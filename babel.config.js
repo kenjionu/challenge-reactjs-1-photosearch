@@ -1,4 +1,4 @@
-{
+module.exports = {
     "presets": [
     ["@babel/preset-env", { "targets": { "esmodules": true } }], // It's the name of the lib you installed
     ["@babel/preset-react", { "runtime": "automatic" }], // It's the name of the lib you installed

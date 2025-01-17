@@ -10,7 +10,6 @@ export const MapComponent = () => {
 
     const { photos, loading, error } = useFetchPhotos(categories);
     const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-    console.log(photos)
 
     return (
         <div className='map'>
@@ -29,8 +28,8 @@ export const MapComponent = () => {
                         mapId='MapId'>
                                 
 
-                                {photos.map((categoryData) => (
-                                        <MarkerCustom imagesx={categoryData.images}>
+                                {photos.map((categoryData, i) => (
+                                        <MarkerCustom key={i} imagesx={categoryData.images}>
                             
                                         </MarkerCustom>
                                          
